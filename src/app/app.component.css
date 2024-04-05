@@ -1,0 +1,18 @@
+h1{
+    text-align: center;
+    background-color: rgb(237, 175, 148);
+}
+section{
+text-align: center;
+background-color: rgb(167, 231, 231);
+width: 300px;
+margin-left: 35%;
+border-radius: 14px;
+padding: 20px;
+}
+input{
+    width: 100%;
+}
+table{
+    width: 100%;
+}
