@@ -1,0 +1,51 @@
+<section>
+ 
+  <div *ngIf="userid== 0" class="login-container">
+   
+         <h1>Task Management System</h1><br>
+         <h3>Welcome</h3>
+   
+          Username: <input type="text" [(ngModel)]="username" placeholder="Enter Username"><br><br>
+          Password: <input type="password" [(ngModel)]="password" placeholder="Password"><br>
+         <button (click)="login()">Login</button><br>
+         <button>SignUp</button>
+         <br><br>
+           <p>Project devloped by Akash Patil <br>SignUp is Progress...</p>
+          
+           <p>Cheack out this <br>Username :- student <br>
+            Password :- <b>Admin123</b></p>
+     
+  </div>
+
+  
+  <div *ngIf="userid>0">
+    <button (click)="logout()">logout</button> <br><br>
+    <button (click)="readAllTask()">ReadAllTask</button>
+  
+     <table border="1">
+        <thead>
+          <tr>
+        
+          <th>Details</th>
+          <th>Action</th>
+          
+         </tr>
+        </thead>
+        <tbody>
+         <tr *ngFor="let task of tasks">
+            <td>{{task.details}}</td>
+           <td><button (click)="delete(task.id)">Delete</button></td>
+           </tr>
+      </tbody>
+     </table>
+     <br>
+
+      Add New task <br>
+      Details: <input type="text" [(ngModel)]="details">
+              <button (click)="addTask()">Add Task</button><br><br>
+              <p>From task planning to managing, task management software helps you log and track every piece of information related to your project. The ability to keep track of your tasks, deadlines, meetings, and team responsibilities makes task management software a crucial tool for your business needs. If any issues arise, it only takes a click to gain insight into the exact source of the problem, take control immediately, and make changes to improve your work flow successfully. Additional collaboration features like chat, forums, and dashboard help your whole team stay connected and on top of the latest developments</p>
+              <p>Focusing all your attention on one task at a time boosts productivity, prevents mistakes, and helps you get the job done efficiently, as opposed to context switching, which can waste precious time, deliver tasks of poor quality, and get you overwhelmed. Both time and task management are effectively implemented when a single task is given priority.</p>
+  </div>
+</section>
+ 
+
